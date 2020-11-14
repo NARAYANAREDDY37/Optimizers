@@ -29,3 +29,11 @@ Different types of Gradient descents are
 - RMSProp tries to resolve Adagrad’s radically diminishing learning rates by using a moving average of the squared gradient. It utilizes the magnitude of the recent gradient descents to normalize the gradient.
 - In RMSProp learning rate gets adjusted automatically and it chooses a different learning rate for each parameter.
 - RMSProp divides the learning rate by the average of the exponential decay of squared gradients
+
+## 6.0 Adam — Adaptive Moment Estimation
+- Another method that calculates the individual adaptive learning rate for each parameter from estimates of first and second moments of the gradients.
+- It also reduces the radically diminishing learning rates of Adagrad
+- Adam can be viewed as a combination of Adagrad, which works well on sparse gradients and RMSprop which works well in online and nonstationary settings.
+- Adam implements the exponential moving average of the gradients to scale the learning rate instead of a simple average as in Adagrad. It keeps an exponentially decaying average of past gradients
+- Adam is computationally efficient and has very little memory requirement
+- Adam optimizer is one of the most popular gradient descent optimization algorithms
